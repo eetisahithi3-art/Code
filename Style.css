@@ -1,37 +1,49 @@
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+body{
+font-family:Arial;
+background:#f5f7fb;
+margin:0;
 }
 
-.container {
-    max-width: 400px;
-    margin: auto;
-    margin-top: 30px;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
+
+.hero{
+text-align:center;
+padding:50px;
 }
 
-h1 {
-    text-align: center;
+
+button{
+background:black;
+color:white;
+padding:12px 20px;
+border:none;
+border-radius:8px;
 }
 
-#chatbox {
-    height: 300px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    overflow-y: auto;
-    margin-bottom: 10px;
+
+#chatSection{
+
+max-width:400px;
+margin:auto;
+background:white;
+padding:20px;
+border-radius:15px;
+
 }
 
-input {
-    width: 70%;
-    padding: 10px;
+
+#chatbox{
+
+height:300px;
+border:1px solid #ddd;
+overflow:auto;
+padding:10px;
+
 }
 
-button {
-    padding: 10px;
-    background: black;
-    color: white;
-    border-radius: 5px;
+
+input{
+
+width:70%;
+padding:10px;
+
 }
