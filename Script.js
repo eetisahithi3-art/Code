@@ -1,49 +1,70 @@
-const business = {
-    name: "ABC Coaching Centre",
-    courses: "JEE, NEET and Foundation",
-    timings: "5 PM to 8 PM",
-    fee: "Contact counsellor for fee details"
+const company = {
+
+name:"ABC Coaching Centre",
+
+services:[
+"JEE Coaching",
+"NEET Coaching",
+"Foundation Classes"
+],
+
+timing:"5 PM - 8 PM"
+
 };
+
+
+
+function startChat(){
+
+document.getElementById("chatbox").innerHTML +=
+
+"<p><b>AI:</b> Hello! I am your AI Workforce employee. How can I help?</p>";
+
+}
+
 
 
 function sendMessage(){
 
-let input = document.getElementById("userInput");
+let input=document.getElementById("userInput");
 
-let message = input.value.toLowerCase();
+let msg=input.value.toLowerCase();
 
-let chat = document.getElementById("chatbox");
-
-
-chat.innerHTML += 
-"<p><b>You:</b> "+input.value+"</p>";
+let chat=document.getElementById("chatbox");
 
 
-let reply = "Thank you for contacting us. How can I help you?";
+chat.innerHTML +=
+
+"<p><b>You:</b>"+input.value+"</p>";
 
 
-if(message.includes("course")){
-reply = "We offer "+business.courses;
+let reply="I can help you with courses, timings and admissions.";
+
+
+if(msg.includes("course")){
+
+reply="We provide "+company.services.join(", ");
+
 }
 
 
-else if(message.includes("time")){
-reply = "Our classes are "+business.timings;
+if(msg.includes("time")){
+
+reply="Our classes run "+company.timing;
+
 }
 
 
-else if(message.includes("fee")){
-reply = business.fee;
+if(msg.includes("admission")){
+
+reply="Please share your name and phone number. Our team will contact you.";
+
 }
 
 
-else if(message.includes("admission") || message.includes("join")){
-reply = "Please share your name and phone number. Our team will contact you.";
-}
+chat.innerHTML +=
 
-
-chat.innerHTML += 
-"<p><b>AI:</b> "+reply+"</p>";
+"<p><b>AI:</b>"+reply+"</p>";
 
 
 input.value="";
